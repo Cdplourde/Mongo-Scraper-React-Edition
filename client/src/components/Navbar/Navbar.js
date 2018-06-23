@@ -18,7 +18,7 @@ const Navbar = (props) => {
           </li>  
           <li className="nav-item">
             {/* TODO: use props for loading */}
-            <img className="loading" src="../public/image/loading.gif" width="39px" alt="loading" />
+            {/* <img className="loading" src="images/loading.gif" width="39px" alt="loading" /> */}
           </li>
         </ul>
       </div>
