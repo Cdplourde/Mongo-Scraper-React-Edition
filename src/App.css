@@ -1,0 +1,10 @@
+.container-articles {
+  background-image: url("/images/soft_wallpaper.png"); 
+}
+
+.articles {
+  list-style: none;
+  padding: 20px;
+  min-height: calc(100vh - 456px);
+  margin: 0;
+}
