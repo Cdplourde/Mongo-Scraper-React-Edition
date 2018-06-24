@@ -13,13 +13,12 @@ const Navbar = (props) => {
           <li className="nav-item active">
             <a href="/" className="nav-link">Home</a>
           </li>   
+          <li className="nav-item active">
+            <a href="/saved" className="nav-link">Saved Articles</a>
+          </li>
           <li className="nav-item">
             <button className="btn btn-danger mx-2 scrape">Scrape Articles</button>
           </li>  
-          <li className="nav-item">
-            {/* TODO: use props for loading */}
-            {/* <img className="loading" src="images/loading.gif" width="39px" alt="loading" /> */}
-          </li>
         </ul>
       </div>
     </nav>    
