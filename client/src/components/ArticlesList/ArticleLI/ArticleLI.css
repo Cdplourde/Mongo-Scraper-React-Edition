@@ -1,0 +1,14 @@
+.card-header {
+  font-size: 28px;
+}
+
+a[target="_blank"] {
+  text-decoration: none;
+}
+
+.fas {
+  position: relative;
+  font-size: 20px;
+  bottom: 2px;
+  left: 5px;
+}

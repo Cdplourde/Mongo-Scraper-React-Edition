@@ -4,7 +4,7 @@ export default {
   // Gets all books
   getArticles: function() {
     // return request.get("/api/articles");
-    return fetch('/api/articles').then(res => res.json()).then(articles => console.log(articles))
+    return fetch('/api/articles').then(res => res.json())
   },
   // // Gets the book with the given id
   // getBook: function(id) {

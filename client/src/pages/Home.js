@@ -6,8 +6,12 @@ import API from "../utils/API"
 
 class Home extends Component {
 
+  state = {
+    articles: null
+  }
+
   componentDidMount() {
-    API.getArticles().then(res => console.log(res));
+    this.renderArticles();
   }
 
   render() {
@@ -17,7 +21,7 @@ class Home extends Component {
         <Showcase />
         <section className="container-articles">
           <ul className="articles">
-            <ArticleLI />
+            {this.state.articles}
           </ul>        
         </section>
       </div>
@@ -26,7 +30,15 @@ class Home extends Component {
 
   renderArticles() {
     API.getArticles()
-      .then(res => console.log(res))
+      .then(res => {
+        console.log(res)
+        const articlesArr = res.map(article => {
+          if (article.saved === false) {
+            return <ArticleLI key={article._id} description={article.description} title={article.title} link={article.link} id={article._id} />
+          }
+        });
+        this.setState({articles: articlesArr})
+      })
       .catch(err => console.log(err));
   }
 }
