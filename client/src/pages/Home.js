@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import Navbar from '../components/Navbar/Navbar';
-import Showcase from '../components/Showcase/Showcase';
 import ArticleLI from '../components/ArticlesList/ArticleLI/ArticleLI';
 import API from "../utils/API"
 
@@ -16,15 +14,11 @@ class Home extends Component {
 
   render() {
     return(
-      <div className="App">
-        <Navbar />
-        <Showcase />
-        <section className="container-articles">
-          <ul className="articles">
-            {this.state.articles}
-          </ul>        
-        </section>
-      </div>
+      <section className="container-articles">
+        <ul className="articles">
+          {this.state.articles}
+        </ul>        
+      </section>
     )
   }
 
